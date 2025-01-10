@@ -20,6 +20,7 @@ export default {
         'fadeInUp': 'fadeInUp 0.6s ease-out forwards',
         'an-skills': 'SkilLs 12s linear infinite',
         'an-skills2': 'SkilLs2 12s linear infinite',
+        'scroll': 'scroll 25s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -56,6 +57,14 @@ export default {
           '0%': { transform: 'translate(0, 0)' },
           '50%': { transform: 'translate(-350px, 0px)' },
           '100%': { transform: 'translate(0, 0)' },
+        },
+        scroll: {
+          '0%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(calc(-100% * 10))',
+          },
         },
       },      
     },

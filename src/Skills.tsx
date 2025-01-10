@@ -3,30 +3,74 @@
 
 export default function Skills() {
     return (
-        <div className='w-screen  bg-black flex justify-center flex-col items-center space-y-8'>
-            <h1 className="text-white text-[40px] font-bold">My Skills</h1>
-            <div className="flex justify-center gap-3 border border-red-700 w-[600px] h-[500px]">
-                <div className="w-[50px]  h-[50px] animate-an-skills bg-[#262b1f] hover:shadow-lg hover:shadow-[#a5fa04] rounded-[20px]"
-                 style={{ animationDelay: "0s" }}
-                ></div>
-                
-                <div className="w-[50px]  h-[50px] animate-an-skills bg-[#262b1f] hover:shadow-lg hover:shadow-[#a5fa04] rounded-[20px]"
-                 
-                ></div>
-                
-                <div className="w-[50px]  h-[50px] animate-an-skills bg-[#262b1f] hover:shadow-lg hover:shadow-[#a5fa04] rounded-[20px]"
-                 style={{ animationDelay: "2s" }}
-                ></div>
-                
-                <div className="w-[50px]  h-[50px] animate-an-skills bg-[#262b1f] hover:shadow-lg hover:shadow-[#a5fa04] rounded-[20px]"
-                 style={{ animationDelay: "3s" }}
-                ></div>
-                <div className="flex items-center flex-col">
-
-                </div>
-                
+        <div className='w-screen  bg-black flex justify-center items-center flex-col space-y-12'>
+            <div className="flex justify-center items-center space-x-8">
+                <img
+                    src="/images/django.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/git.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/javascript.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/docker.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/python.png" 
+                    className="w-[50px] h-[50px]"
+                    />
             </div>
-            
+            <div className="flex justify-center items-center space-x-8">
+                <img
+                    src="/images/html.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/nextjs.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/nginx.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/react.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/tailwind-css.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+            </div>
+            <div className="flex justify-center items-center space-x-8">
+                <img
+                    src="/images/typescript.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/C++.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/bash.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/CSS.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+                <img
+                    src="/images/C.png" 
+                    className="w-[50px] h-[50px]"
+                    />
+            </div>
+          
         </div>
     );
 }

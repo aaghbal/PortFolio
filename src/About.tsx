@@ -2,8 +2,24 @@ import { useEffect, useState } from "react";
 
 
 export default function About() {
+    const [name, setName] = useState("110101 01010011")
     const [show, setShow] = useState(false)
     useEffect(() => {
+        const randomizeName = () => {
+            const chars = "01";
+            let newName = "";
+            for (let i = 0; i < name.length; i++) {
+                newName += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            setName(newName);
+        };
+
+        const interval = setInterval(randomizeName, 100);
+
+        setTimeout(() => {
+            clearInterval(interval);
+            setName("Aghbal Abdellah");
+        }, 2000);
         const timer = setInterval(() => {
             setShow(true)
         }  , 2000)
@@ -13,7 +29,7 @@ export default function About() {
     }, []) 
     return (
         <div className='h-[650px] w-[800px] justify-center'>
-            <p className="text-white text-[40px] mt-32 font-Libre+Baskerville animate-fade-in">I'M <span className="text-[#a5fa04]">Aghbal Abdellah</span></p>
+            <p className="text-white text-[40px] mt-32 font-Libre+Baskerville animate-fade-in">I'M <span className="text-[#a5fa04]">{name}</span></p>
             <p className="text-white text-[40px] animate-fade-in">Full Stack Developer</p>
             <h1 className="text-white mt-16 font-bold text-[30px] animate-fade-in">About</h1>
             <div className="flex  ml-11 space-x-3 animate-fade-in">
