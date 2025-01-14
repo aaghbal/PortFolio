@@ -66,6 +66,7 @@ export default {
             transform: 'translateX(calc(-100% * 10))',
           },
         },
+        
       },      
     },
   },

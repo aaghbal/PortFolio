@@ -1,0 +1,117 @@
+import os
+import pytest
+from tempfile import NamedTemporaryFile
+
+
+class File:
+    def __init__(self, file_path):
+        self.file_path = file_path
+
+    def read(self):
+        try:
+            with open(self.file_path, 'r') as f:
+                return f.read()
+        except FileNotFoundError:
+            return "File not found."
+        except Exception as e:
+            return str(e)
+
+    def write(self, data):
+        try:
+            with open(self.file_path, 'w') as f:
+                f.write(data)
+            return "Write successful."
+        except PermissionError:
+            return "Permission denied."
+        except Exception as e:
+            return str(e)
+
+    def delete(self):
+        if os.path.exists(self.file_path):
+            try:
+                os.remove(self.file_path)
+                return "File deleted successfully."
+            except Exception as e:
+                return str(e)
+        else:
+            return "File not found to delete."
+
+    def __del__(self):
+        # This is only for cleaning up resources when the object is destroyed
+        pass
+
+
+class TestFile:
+
+    def test_read_file_success(self):
+        with NamedTemporaryFile(delete=False) as tmp_file:
+            tmp_file.write(b"Hello, World!")
+            tmp_file_path = tmp_file.name
+        
+        file = File(tmp_file_path)
+        result = file.read()
+        assert result == "Hello, World!"
+        
+        os.remove(tmp_file_path)
+
+    def test_read_file_not_found(self):
+        file = File("non_existent_file.txt")
+        result = file.read()
+        assert result == "File not found."
+
+    def test_write_file_success(self):
+        with NamedTemporaryFile(delete=False) as tmp_file:
+            tmp_file_path = tmp_file.name
+        
+        file = File(tmp_file_path)
+        write_data = "This is a test."
+        result = file.write(write_data)
+        assert result == "Write successful."
+
+        with open(tmp_file_path, 'r') as f:
+            assert f.read() == write_data
+        
+        os.remove(tmp_file_path)
+
+    def test_write_file_permission_denied(self):
+        tmp_file_path = "/root/protected_file.txt"
+        file = File(tmp_file_path)
+        result = file.write("Test")
+        assert result == "Permission denied."
+
+    def test_delete_file_success(self):
+        with NamedTemporaryFile(delete=False) as tmp_file:
+            tmp_file_path = tmp_file.name
+        
+        file = File(tmp_file_path)
+        result = file.delete()
+        assert result == "File deleted successfully."
+        assert not os.path.exists(tmp_file_path)
+
+    def test_delete_file_not_found(self):
+        file = File("non_existent_file.txt")
+        result = file.delete()
+        assert result == "File not found to delete."
+
+    def test_write_empty_data(self):
+        with NamedTemporaryFile(delete=False) as tmp_file:
+            tmp_file_path = tmp_file.name
+        
+        file = File(tmp_file_path)
+        result = file.write("")
+        assert result == "Write successful."
+
+        with open(tmp_file_path, 'r') as f:
+            assert f.read() == ""
+        
+        os.remove(tmp_file_path)
+
+    def test_read_empty_file(self):
+        with NamedTemporaryFile(delete=False) as tmp_file:
+            tmp_file_path = tmp_file.name
+        
+        file = File(tmp_file_path)
+        result = file.read()
+        assert result == ""
+        
+        os.remove(tmp_file_path)

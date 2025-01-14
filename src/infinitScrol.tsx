@@ -25,9 +25,6 @@ const InfiniteScrollSkills: React.FC = () => {
 
   return (
     <div className="w-full overflow-hidden">
-        <span className='text-white'>
-            {skills.length}
-            </span>
       <div
         className={`flex animate-scroll ${isHovered ? 'hovered' : ''}`}
         onMouseEnter={() => setIsHovered(true)}
@@ -41,13 +38,11 @@ const InfiniteScrollSkills: React.FC = () => {
                 <img
                 src={skill as  string} 
                 alt={`Skill ${index + 1}`}
-                width={60} // Width of the image
-                height={60} // Height of the image
-                // objectFit="contain" // To maintain aspect ratio
+                width={60}
+                height={60}
                 />
           </div>
         ))}
-        {/* Duplicate the skills for seamless scrolling */}
       </div>
     </div>
   );
