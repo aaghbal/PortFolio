@@ -9,7 +9,7 @@ interface FormData {
   message: string;
 }
 
-// Define types for notification
+
 interface Notification {
   show: boolean;
   message: string;
@@ -17,7 +17,6 @@ interface Notification {
 }
 
 const ContactMe: React.FC = () => {
-  // States with type definitions
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -31,10 +30,9 @@ const ContactMe: React.FC = () => {
     type: ''
   });
 
-  // EmailJS configuration
-  const EMAIL_SERVICE_ID = 'YOUR_SERVICE_ID';
-  const EMAIL_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-  const EMAIL_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+  const EMAIL_SERVICE_ID = 'service_qifxkrk';
+  const EMAIL_TEMPLATE_ID = 'template_d83fevm';
+  const EMAIL_PUBLIC_KEY = 'R-ldMUBRrkyzOT6xz';
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,8 +43,8 @@ const ContactMe: React.FC = () => {
         EMAIL_SERVICE_ID,
         EMAIL_TEMPLATE_ID,
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
         },
         EMAIL_PUBLIC_KEY
@@ -59,7 +57,6 @@ const ContactMe: React.FC = () => {
           type: 'success'
         });
         
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -75,7 +72,6 @@ const ContactMe: React.FC = () => {
       console.error('EmailJS Error:', error);
     } finally {
       setIsLoading(false);
-      // Hide notification after 5 seconds
       setTimeout(() => {
         setNotification(prev => ({ ...prev, show: false }));
       }, 5000);
@@ -122,7 +118,7 @@ const ContactMe: React.FC = () => {
                 id="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 bg-[#a5fa04]/30 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-1 block w-full h-10 border-gray-300 bg-[#a5fa04]/30 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 required
               />
             </div>
@@ -140,7 +136,7 @@ const ContactMe: React.FC = () => {
                 id="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-[#a5fa04]/30 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-1 block w-full h-10 bg-[#a5fa04]/30 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 required
               />
             </div>
@@ -158,7 +154,7 @@ const ContactMe: React.FC = () => {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-[#a5fa04]/30 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                className="mt-1 block w-full  bg-[#a5fa04]/30 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 required
               />
             </div>
