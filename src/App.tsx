@@ -6,7 +6,7 @@ import About from './About'
 import RadarChart from './RadarChart';
 import InfiniteScrollSkills from './infinitScrol';
 import Projects from './Projects';
-
+import Contact from './Contact';
 
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
         </div>
       </div>
       <Projects />
+      <Contact />
      </div>
   )
 }

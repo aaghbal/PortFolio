@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     projectLink 
 }) => {
     return (
-        <div className="w-[300px] h-[420px] bg-[#243505] rounded-lg relative overflow-hidden group
+        <div className="w-[300px] h-[440px] bg-[#243505] rounded-lg relative overflow-hidden group
             transition-all duration-300 
             hover:rotate-3 
             hover:scale-105 
@@ -40,11 +40,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <div className="absolute bottom-0 left-0 right-0 bg-[#243505] transition-all duration-300 
                 group-hover:h-[85%] h-1/2">
                 
-                <div className="p-6 text-white h-full overflow-y-auto scrollbar-hide">
+                <div className="p-4 text-white h-full overflow-y-auto scrollbar-hide">
                     <h3 className="text-[#a5fa04] text-xl font-bold mb-2">
                         {projectName}
                     </h3>
-                    <p className="text-sm text-gray-200 leading-relaxed mb-4 
+                    <p className="text-sm text-gray-200 leading-relaxed mb-1 
                         line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
                         {description}
                     </p>
