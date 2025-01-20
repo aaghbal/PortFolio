@@ -23,7 +23,7 @@ export default function MySideBar() {
                 Skills
             </button>
             <button 
-                onClick={() => scrollToSection('projects')} 
+                onClick={() => scrollToSection('projectS')} 
                 className='text-white hover:text-[#a5fa04] transition-colors duration-300'
             >
                 Projects

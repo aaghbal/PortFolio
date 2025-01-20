@@ -14,7 +14,8 @@
     "@nivo/radar": "^0.88.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-infinite-scroll-component": "^6.1.0"
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

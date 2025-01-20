@@ -87,7 +87,6 @@ const ContactMe: React.FC = () => {
     });
   };
 
-  // Notification component
   const NotificationComponent: React.FC<Omit<Notification, 'show'>> = ({ message, type }) => (
     <div
       className={`fixed top-4 right-4 p-4 rounded-md ${
@@ -205,7 +204,7 @@ const ContactMe: React.FC = () => {
                     </svg>
                 </a>
                 <a 
-                    href="https://instagram.com/yourusername" 
+                    href="https://instagram.com/aghbal_abdellah" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-gray-600 hover:text-pink-600 transition-colors duration-300"

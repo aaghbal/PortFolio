@@ -2,7 +2,6 @@ import './index.css'
 import Header from './Header'
 import MyPicture from './MyPicture'
 import About from './About'
-// import Skills from './Skills'
 import RadarChart from './RadarChart';
 import InfiniteScrollSkills from './infinitScrol';
 import Projects from './Projects';

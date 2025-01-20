@@ -5,20 +5,20 @@ import { ResponsiveRadar } from '@nivo/radar';
 const RadarChart: React.FC = () => {
     const data = [
         { Skill: 'JavaScript', Proficiency: 90 },
-        { Skill: 'TypeScript', Proficiency: 85 },
-        { Skill: 'C', Proficiency: 80 },
-        { Skill: 'C++', Proficiency: 75 },
-        { Skill: 'Python', Proficiency: 88 },
+        { Skill: 'TypeScript', Proficiency: 90 },
+        { Skill: 'C', Proficiency: 100 },
+        { Skill: 'C++', Proficiency: 80 },
+        { Skill: 'Python', Proficiency: 90 },
         { Skill: 'HTML', Proficiency: 95 },
-        { Skill: 'CSS', Proficiency: 90 },
+        { Skill: 'CSS', Proficiency: 95 },
         { Skill: 'Docker', Proficiency: 80 },
-        { Skill: 'Git', Proficiency: 85 },
-        { Skill: 'Bash', Proficiency: 70 },
-        { Skill: 'Nginx', Proficiency: 65 },
-        { Skill: 'Django', Proficiency: 85 },
-        { Skill: 'ReactJs', Proficiency: 90 },
-        { Skill: 'NextJs', Proficiency: 88 },
-        { Skill: 'Tailwindcss', Proficiency: 87 },
+        { Skill: 'Git', Proficiency: 90 },
+        { Skill: 'Bash', Proficiency: 90 },
+        { Skill: 'Nginx', Proficiency: 80 },
+        { Skill: 'Django', Proficiency: 95 },
+        { Skill: 'ReactJs', Proficiency: 95 },
+        { Skill: 'NextJs', Proficiency: 95 },
+        { Skill: 'Tailwindcss', Proficiency: 90 },
     ];
 
     return (
