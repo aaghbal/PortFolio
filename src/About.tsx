@@ -4,6 +4,13 @@ import { useEffect, useState } from "react";
 export default function About() {
     const [name, setName] = useState("110101 01010011")
     const [show, setShow] = useState(false)
+    const handleContactClick = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     useEffect(() => {
         const randomizeName = () => {
             const chars = "01";
@@ -39,7 +46,8 @@ export default function About() {
                     with and have an impact. I love putting together pieces of the puzzle to <span className="text-[#a5fa04]">solve problems</span> and paying
                      attention to details, delivering high-quality output!</p>
             </div>
-            {show && (<button className="text-white animate-fade-move border-4 border-[#a5fa04]/40 p-2 mt-10 ml-11 text-[30px] rounded-lg">Contact Me</button>)}
+            {show && (<button className="text-white animate-fade-move border-4 border-[#a5fa04]/40 p-2 mt-10 ml-11 text-[30px] rounded-lg" 
+                    onClick={handleContactClick}>Contact Me</button>)}
             
         </div>
     );
