@@ -219,7 +219,7 @@ const ContactMe: React.FC = () => {
                     </svg>
                 </a>
                 <a 
-                    href="https://wa.me/+21243992808" 
+                    href="https://wa.me/+212643992808" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-gray-600 hover:text-green-500 transition-colors duration-300"
