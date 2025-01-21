@@ -20,7 +20,7 @@ export default {
         'fadeInUp': 'fadeInUp 0.6s ease-out forwards',
         'an-skills': 'SkilLs 12s linear infinite',
         'an-skills2': 'SkilLs2 12s linear infinite',
-        'scroll': 'scroll 25s linear infinite',
+        'scroll': 'scroll 50s linear infinite',
       },
       keyframes: {
         fadeIn: {
