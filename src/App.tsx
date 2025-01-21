@@ -11,7 +11,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div className='bg-black min-h-screen w-screen flex flex-col'>
+      <div className='bg-black min-h-screen flex flex-col'>
         <Header />
         <section id="home" className='relative flex flex-col lg:flex-row justify-center items-center'>
           <div className='w-full lg:w-1/2'>
