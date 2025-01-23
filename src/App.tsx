@@ -21,7 +21,7 @@ function App() {
             <About />
           </div>
         </section>
-        <section id="skills" className='w-full flex flex-col justify-center items-center'>
+        <section id="skills" className='flex flex-col justify-center items-center'>
           <h1 className='text-white text-5xl text-center mt-48'>Skills</h1>
           <div className='flex items-center w-full shadow-inner flex-col md:flex-row'>
             <div className='w-1/3 flex items-center h-96 relative md:ml-44'>

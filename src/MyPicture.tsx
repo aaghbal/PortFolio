@@ -78,8 +78,9 @@ export default function MyPicture({ imageUrl }: { imageUrl: string }) {
     return (
         <div className='flex flex-col items-center animate-fade-in'>
             <div className='
+                w-[490px]
                 h-[650px] 
-                w-[650px] 
+                lg:w-[650px] 
                 relative 
                 overflow-hidden 
                 bg-gradient-to-b 
